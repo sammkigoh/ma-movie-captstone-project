@@ -43,49 +43,30 @@ const FilterComponent = ({ onFilterChange }) => {
 
 	return (
 		<div className="flex justify-center space-x-4">
-			<div>
-				<label className="block">Year:</label>
-				<select
-					name="year"
-					value={filters.year}
-					onChange={handleChange}
-					className="p-2 border rounded"
-				>
-					<option value="">Select Year</option>
-					{years.map((year) => (
-						<option key={year} value={year}>
-							{year}
-						</option>
-					))}
-				</select>
-			</div>
-			<div>
-				<label className="block">Genre:</label>
-				<select
-					name="genre"
-					value={filters.genre}
-					onChange={handleChange}
-					className="p-2 border rounded"
-				>
-					<option value="">Select Genre</option>
-					{genres.map((genre) => (
-						<option key={genre.id} value={genre.id}>
-							{genre.name}
-						</option>
-					))}
-				</select>
-			</div>
-			<div>
-				<label className="block">IMDb Rating:</label>
-				<input
-					type="number"
-					name="rating"
-					placeholder="enter rating"
-					value={filters.rating}
-					onChange={handleChange}
-					className="p-2 border rounded"
-				/>
-			</div>
+			<select name="year" onChange={handleChange}>
+				<option value="">Year</option>
+				{years.map((year) => (
+					<option key={year} value={year}>
+						{year}
+					</option>
+				))}
+			</select>
+			<select name="genre" onChange={handleChange}>
+				<option value="">Genre</option>
+				{genres.map((genre) => (
+					<option key={genre.id} value={genre.id}>
+						{genre.name}
+					</option>
+				))}
+			</select>
+			<input
+				type="text"
+				name="rating"
+				placeholder="rating"
+				value={filters.rating}
+				onChange={handleChange}
+				className="-2 border rounded"
+			/>
 		</div>
 	);
 };
