@@ -1,0 +1,101 @@
+[
+	{
+		"imdbID": "tt3896198",
+		"Title": "Guardians of the Galaxy Vol. 2",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/u0hvatij/guardians-of-the-galaxy-vol-2-movie-poster.jpg?v=1549121063",
+		"Genre": "Action, Adventure, Comedy",
+		"Year": "2017",
+		"Rating": "7.6/10",
+		"Plot": "The Guardians struggle to keep together as a team while dealing with their personal family issues.",
+		"Cast": "Chris Pratt, Zoe Saldana, Dave Bautista",
+		"Trailer": "https://youtu.be/wUn05hdkhjM"
+	},
+	{
+		"imdbID": "tt4154796",
+		"Title": "Avengers: Endgame",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/rnuyzjhd/avengers-endgame-movie-poster.jpg?v=1564264140",
+		"Genre": "Action, Adventure, Sci-Fi",
+		"Year": "2019",
+		"Rating": "8.4/10",
+		"Plot": "After the devastating events of Infinity War, the remaining Avengers must find a way to reverse Thanos' actions.",
+		"Cast": "Robert Downey Jr., Chris Evans, Scarlett Johansson",
+		"Trailer": "https://youtu.be/TcMBFSGVi1c"
+	},
+	{
+		"imdbID": "tt0120737",
+		"Title": "The Lord of the Rings: The Fellowship of the Ring",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/wxujkcbm/the-lord-of-the-rings-the-fellowship-of-the-ring-movie-poster.jpg?v=1594555579",
+		"Genre": "Action, Adventure, Fantasy",
+		"Year": "2001",
+		"Rating": "8.9/10",
+		"Plot": "A young hobbit named Frodo Baggins sets out on an epic quest to destroy the One Ring.",
+		"Cast": "Elijah Wood, Ian McKellen, Orlando Bloom",
+		"Trailer": "https://youtu.be/V75dMMIW2B4"
+	},
+	{
+		"imdbID": "tt9362722",
+		"Title": "Spider-Man: Across the Spider-Verse",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/nvzxjkhg/spider-man-across-the-spider-verse-movie-poster.jpg?v=1682534125",
+		"Genre": "Animation, Action, Adventure",
+		"Year": "2023",
+		"Rating": "8.6/10",
+		"Plot": "Miles Morales returns for the next chapter of the Spider-Verse saga, facing new challenges and meeting new allies.",
+		"Cast": "Shameik Moore, Hailee Steinfeld, Oscar Isaac",
+		"Trailer": "https://youtu.be/shW9i6k8cB0"
+	},
+	{
+		"imdbID": "tt0111161",
+		"Title": "The Shawshank Redemption",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/b5v2e9jg/the-shawshank-redemption-movie-poster.jpg?v=1596989012",
+		"Genre": "Drama",
+		"Year": "1994",
+		"Rating": "9.3/10",
+		"Plot": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+		"Cast": "Tim Robbins, Morgan Freeman, Bob Gunton",
+		"Trailer": "https://youtu.be/PLl99DlL6b4"
+	},
+	{
+		"imdbID": "tt5090568",
+		"Title": "Transformers: Rise of the Beasts",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/00y3oix2/transformers-rise-of-the-beasts-movie-poster.jpg?v=1682600690",
+		"Genre": "Action, Adventure, Sci-Fi",
+		"Year": "2023",
+		"Rating": "6.0/10",
+		"Plot": "During the 1990s, a battle for the fate of Earth begins between two factions of Transformers.",
+		"Cast": "Anthony Ramos, Dominique Fishback, Luna Lauren Velez",
+		"Trailer": "https://youtu.be/itnqEauWQZM"
+	},
+	{
+		"imdbID": "tt1853728",
+		"Title": "Django Unchained",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/hj2oda1x/django-unchained-theatrical-movie-poster.jpg?v=1456571485",
+		"Genre": "Action, Drama, Western",
+		"Year": "2012",
+		"Rating": "8.5/10",
+		"Plot": "With the help of a bounty hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.",
+		"Cast": "Jamie Foxx, Christoph Waltz, Leonardo DiCaprio",
+		"Trailer": "https://youtu.be/0fUCuvNlOCg"
+	},
+	{
+		"imdbID": "tt837562",
+		"Title": "Hotel Transylvania",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/qj5t94kq/hotel-transylvania-theatrical-movie-poster.jpg?v=1500841607",
+		"Genre": "Animation, Comedy, Family",
+		"Year": "2012",
+		"Rating": "7.0/10",
+		"Plot": "Dracula, who operates a high-end resort for monsters, falls in love with a human who stumbles upon the resort.",
+		"Cast": "Adam Sandler, Andy Samberg, Selena Gomez",
+		"Trailer": "https://youtu.be/q4RK3jY7AVk"
+	},
+	{
+		"imdbID": "tt5463162",
+		"Title": "Deadpool 2",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/qrv5gf2m/deadpool-2-movie-poster.jpg?v=1525882504",
+		"Genre": "Action, Adventure, Comedy",
+		"Year": "2018",
+		"Rating": "7.6/10",
+		"Plot": "Deadpool forms a team of mutants to protect a young boy from a powerful mutant.",
+		"Cast": "Ryan Reynolds, Josh Brolin, Morena Baccarin",
+		"Trailer": "https://youtu.be/D86RtevtfrA"
+	}
+]

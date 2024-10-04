@@ -1,0 +1,211 @@
+[
+	{
+		"imdbID": "tt3896198",
+		"Title": "Guardians of the Galaxy Vol. 2",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/u0hvatij/guardians-of-the-galaxy-vol-2-movie-poster.jpg?v=1549121063",
+		"Genre": "Action, Adventure, Comedy",
+		"Year": "2017",
+		"Rating": "7.6/10",
+		"Plot": "The Guardians struggle to keep together as a team while dealing with their personal family issues.",
+		"Cast": "Chris Pratt, Zoe Saldana, Dave Bautista",
+		"Trailer": "https://www.youtube.com/embed/wUn05hdkhjM?si=Df1ihpMU9moheVqc"
+	},
+	{
+		"imdbID": "tt4154796",
+		"Title": "Avengers: Endgame",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/rnuyzjhd/avengers-endgame-movie-poster.jpg?v=1564264140",
+		"Genre": "Action, Adventure, Sci-Fi",
+		"Year": "2019",
+		"Rating": "8.4/10",
+		"Plot": "After the devastating events of Infinity War, the remaining Avengers must find a way to reverse Thanos' actions.",
+		"Cast": "Robert Downey Jr., Chris Evans, Scarlett Johansson",
+		"Trailer": "https://www.youtube.com/embed/TcMBFSGVi1c?si=rNU0ScLxDOp59lP1"
+	},
+	{
+		"imdbID": "tt0120737",
+		"Title": "The Lord of the Rings: The Fellowship of the Ring",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/wxujkcbm/the-lord-of-the-rings-the-fellowship-of-the-ring-movie-poster.jpg?v=1594555579",
+		"Genre": "Action, Adventure, Fantasy",
+		"Year": "2001",
+		"Rating": "8.9/10",
+		"Plot": "A young hobbit named Frodo Baggins sets out on an epic quest to destroy the One Ring.",
+		"Cast": "Elijah Wood, Ian McKellen, Orlando Bloom",
+		"Trailer": "https://www.youtube.com/embed/V75dMMIW2B4?si=_T5DJU8R_X_Df67A"
+	},
+	{
+		"imdbID": "tt9362722",
+		"Title": "Spider-Man: Across the Spider-Verse",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/nvzxjkhg/spider-man-across-the-spider-verse-movie-poster.jpg?v=1682534125",
+		"Genre": "Animation, Action, Adventure",
+		"Year": "2023",
+		"Rating": "8.6/10",
+		"Plot": "Miles Morales returns for the next chapter of the Spider-Verse saga, facing new challenges and meeting new allies.",
+		"Cast": "Shameik Moore, Hailee Steinfeld, Oscar Isaac",
+		"Trailer": "https://www.youtube.com/embed/shW9i6k8cB0?si=NYK66RuuBKqw-0uI"
+	},
+	{
+		"imdbID": "tt0111161",
+		"Title": "The Shawshank Redemption",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/b5v2e9jg/the-shawshank-redemption-movie-poster.jpg?v=1596989012",
+		"Genre": "Drama",
+		"Year": "1994",
+		"Rating": "9.3/10",
+		"Plot": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+		"Cast": "Tim Robbins, Morgan Freeman, Bob Gunton",
+		"Trailer": "https://www.youtube.com/embed/PLl99DlL6b4?si=HK_XJ1q-BDyOBcbF"
+	},
+	{
+		"imdbID": "tt5090568",
+		"Title": "Transformers: Rise of the Beasts",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/00y3oix2/transformers-rise-of-the-beasts-movie-poster.jpg?v=1682600690",
+		"Genre": "Action, Adventure, Sci-Fi",
+		"Year": "2023",
+		"Rating": "6.0/10",
+		"Plot": "During the 1990s, a battle for the fate of Earth begins between two factions of Transformers.",
+		"Cast": "Anthony Ramos, Dominique Fishback, Luna Lauren Velez",
+		"Trailer": "https://www.youtube.com/embed/itnqEauWQZM?si=J9oeAOLY5W-Oe4Ug"
+	},
+	{
+		"imdbID": "tt1853728",
+		"Title": "Django Unchained",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/hj2oda1x/django-unchained-theatrical-movie-poster.jpg?v=1456571485",
+		"Genre": "Action, Drama, Western",
+		"Year": "2012",
+		"Rating": "8.5/10",
+		"Plot": "With the help of a bounty hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.",
+		"Cast": "Jamie Foxx, Christoph Waltz, Leonardo DiCaprio",
+		"Trailer": "https://youtu.be/0fUCuvNlOCg"
+	},
+	{
+		"imdbID": "tt837562",
+		"Title": "Hotel Transylvania",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/qj5t94kq/hotel-transylvania-theatrical-movie-poster.jpg?v=1500841607",
+		"Genre": "Animation, Comedy, Family",
+		"Year": "2012",
+		"Rating": "7.0/10",
+		"Plot": "Dracula, who operates a high-end resort for monsters, falls in love with a human who stumbles upon the resort.",
+		"Cast": "Adam Sandler, Andy Samberg, Selena Gomez",
+		"Trailer": "https://youtu.be/q4RK3jY7AVk"
+	},
+	{
+		"imdbID": "tt5463162",
+		"Title": "Deadpool 2",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/qrv5gf2m/deadpool-2-movie-poster.jpg?v=1525882504",
+		"Genre": "Action, Adventure, Comedy",
+		"Year": "2018",
+		"Rating": "7.6/10",
+		"Plot": "Deadpool forms a team of mutants to protect a young boy from a powerful mutant.",
+		"Cast": "Ryan Reynolds, Josh Brolin, Morena Baccarin",
+		"Trailer": "https://youtu.be/D86RtevtfrA"
+	},
+	{
+		"imdbID": "tt0245712",
+		"Title": "The Dark Knight",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/udapnxr3/the-dark-knight-movie-poster.jpg?v=1456051180",
+		"Genre": "Action, Crime, Drama",
+		"Year": "2008",
+		"Rating": "9.0/10",
+		"Plot": "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.",
+		"Cast": "Christian Bale, Heath Ledger, Aaron Eckhart",
+		"Trailer": "https://youtu.be/EXeTwQWrcwY"
+	},
+	{
+		"imdbID": "tt0361748",
+		"Title": "Inception",
+		"Poster": "https://image.tmdb.org/t/p/original/8IB2e4r4oVhHnANbnm7O3Tj6tF8.jpg",
+		"Genre": "Action, Adventure, Sci-Fi",
+		"Year": "2010",
+		"Rating": "8.8/10",
+		"Plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.",
+		"Cast": "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page",
+		"Trailer": "https://youtu.be/YoHD9XEInc0"
+	},
+	{
+		"imdbID": "tt0411487",
+		"Title": "The Pursuit of Happyness",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/iecdpu8s/the-pursuit-of-happyness-movie-poster.jpg?v=1456247041",
+		"Genre": "Drama, Biography",
+		"Year": "2006",
+		"Rating": "8.0/10",
+		"Plot": "A struggling salesman takes custody of his son as he battles with homelessness.",
+		"Cast": "Will Smith, Jaden Smith, Thandie Newton",
+		"Trailer": "https://youtu.be/DMOBlEcRuw8"
+	},
+	{
+		"imdbID": "tt2446042",
+		"Title": "Whiplash",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/xveiw3g3/whiplash-movie-poster.jpg?v=1456046076",
+		"Genre": "Drama, Music",
+		"Year": "2014",
+		"Rating": "8.5/10",
+		"Plot": "A promising young drummer enrolls at a cut-throat music conservatory where his aggressive instructor pushes him to the limits of his ability.",
+		"Cast": "Miles Teller, J.K. Simmons, Melissa Benoist",
+		"Trailer": "https://youtu.be/7d_jQycdQGo"
+	},
+	{
+		"imdbID": "tt0910970",
+		"Title": "The King's Speech",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/51q23mty/the-kings-speech-movie-poster.jpg?v=1456770786",
+		"Genre": "Biography, Drama",
+		"Year": "2010",
+		"Rating": "8.0/10",
+		"Plot": "The story of King George VI, his impromptu ascension to the throne and the speech therapist who helped him overcome his speech impediment.",
+		"Cast": "Colin Firth, Geoffrey Rush, Helena Bonham Carter",
+		"Trailer": "https://youtu.be/EcxBrTvLbBM"
+	},
+	{
+		"imdbID": "tt0780622",
+		"Title": "The Help",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/woowemge/the-help-movie-poster.jpg?v=1456063235",
+		"Genre": "Drama",
+		"Year": "2011",
+		"Rating": "8.1/10",
+		"Plot": "An aspiring author during the civil rights movement of the 1960s decides to write a book detailing the African American maids' points of view on the white families for which they work.",
+		"Cast": "Viola Davis, Octavia Spencer, Emma Stone",
+		"Trailer": "https://youtu.be/XOTkNsxhECY"
+	},
+	{
+		"imdbID": "tt22022452",
+		"Title": "Inside Out 2",
+		"Poster": "https://www.themoviedb.org/t/p/w1280/vpnVM9B6NMmQpWeZvzLvDESb2QY.jpg",
+		"Genre": "Drama, Biography",
+		"Year": "2024",
+		"Rating": "7.7/10",
+		"Plot": "A sequel that features Riley entering puberty and experiencing brand new, more complex emotions as a result. As Riley tries to adapt to her teenage years, her old emotions try to adapt to the possibility of being replaced.",
+		"Cast": "Amy Poehler, Maya Hawke, Kensington Tallman",
+		"Trailer": "https://youtu.be/L4DrolmDxmw"
+	},
+	{
+		"imdbID": "tt12672620",
+		"Title": "The Three Musketeers - Part II: Milady",
+		"Poster": "https://image.tmdb.org/t/p/original/rtosxP5sXuoRFPH4sVbMccLIPiV.jpg",
+		"Genre": "Action",
+		"Year": "2024",
+		"Rating": "6.4/10",
+		"Plot": "D'Artagnan is forced to join forces with Milady to save Constance, who was kidnapped before his eyes. But as war is declared and Athos, Porthos and Aramis have already joined the front, a secret from the past shatters old alliances.",
+		"Cast": "François Civil, Vincent Cassel, Romain Duris",
+		"Trailer": "https://youtu.be/fgzBKVg7DfU"
+	},
+	{
+		"imdbID": "tt0910970",
+		"Title": "Furiosa: A Mad Max Saga",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/scd1sgsd/furiosa-a-mad-max-saga-movie-poster.jpg?v=1713342626",
+		"Genre": "Action",
+		"Year": "2024",
+		"Rating": "7.5/10",
+		"Plot": "The origin story of renegade warrior Furiosa before her encounter and teamup with Mad Max.",
+		"Cast": "Anya Taylor-Joy, Chris Hemsworth, Tom Burke",
+		"Trailer": "https://youtu.be/XJMuhwVlca4"
+	},
+	{
+		"imdbID": "tt4919268",
+		"Title": "Bad Boys: Ride or Die",
+		"Poster": "https://media-cache.cinematerial.com/p/500x/fr1djdku/bad-boys-ride-or-die-movie-poster.jpg?v=1713629033",
+		"Genre": "Action",
+		"Year": "2024",
+		"Rating": "6.6/10",
+		"Plot": "This Summer, the world's favorite Bad Boys are back with their iconic mix of edge-of-your seat action and outrageous comedy but this time with a twist: Miami's finest are now on the run.",
+		"Cast": "Will Smith, Martin Lawrence, Vanessa Hudgens",
+		"Trailer": "https://youtu.be/hRFY_Fesa9Q"
+	}
+]
