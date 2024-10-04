@@ -1,26 +1,40 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { FavoritesContext } from "../contexts/FavoritesContext";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Favorites = () => {
-	const [favorites, setFavorites] = useState([]);
+	const { favorites, removeFavorites } = useContext(FavoritesContext);
 	const navigate = useNavigate();
-
-	const handleRemoveFavorite = (imdbID) => {
-		const updatedFavorites = favorites.filter(
-			(favorite) => favorite.imdbID
-		);
-		setFavorites(updatedFavorites);
-		localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
-	};
+	const [favoriteMovies, setFavoriteMovies] = useState([]);
 
 	useEffect(() => {
-		const storedFavorites =
-			JSON.parse(localStorage.getItem("favorites")) || [];
-		setFavorites(storedFavorites);
-	}, []);
+		const fetchFavoriteMovies = async () => {
+			try {
+				const movieRequests = favorites.map((favorite) =>
+					axios.get(
+						`${import.meta.env.VITE_REACT_APP_API_URL}movie/${
+							favorite.id
+						}?api_key=${import.meta.env.VITE_REACT_APP_API_KEY}`
+					)
+				);
+				const responses = await Promise.all(movieRequests);
+				setFavoriteMovies(responses.map((res) => res.data));
+			} catch (error) {
+				console.error("Error fetching favorite movies:", error);
+			}
+		};
+		if (favorites.length > 0) {
+			fetchFavoriteMovies();
+		}
+	}, [favorites]);
 
-	const handleMovieClick = (imdbID) => {
-		navigate(`/movies/${imdbID}`);
+	const handleRemoveFavorite = (id) => {
+		removeFavorites(id);
+	};
+
+	const handleMovieClick = (id) => {
+		navigate(`/movies/${id}`);
 	};
 
 	return (
@@ -30,24 +44,22 @@ const Favorites = () => {
 			</h1>
 			{favorites.length > 0 ? (
 				<div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-					{favorites.map((movie) => (
+					{favoriteMovies.map((movie) => (
 						<div
-							key={movie.imdbID}
+							key={movie.id}
 							className="bg-transparent rounded-lg flex flex-col"
 						>
 							<img
-								src={movie.Poster}
-								alt={movie.Title}
+								src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+								alt={movie.title}
 								className="w-full h-90 rounded-t-lg object-cover"
-								onClick={() => handleMovieClick(movie.imdbID)}
+								onClick={() => handleMovieClick(movie.id)}
 							/>
 							<h3 className="text-center text-sm mt-2 truncate">
-								{movie.Title}
+								{movie.title}
 							</h3>
 							<button
-								onClick={() =>
-									handleRemoveFavorite(movie.imdbID)
-								}
+								onClick={() => handleRemoveFavorite(movie.id)}
 								className=" bg-sky-900 text-red-500 font-bold text-center mt-2"
 							>
 								Remove from Favorites
