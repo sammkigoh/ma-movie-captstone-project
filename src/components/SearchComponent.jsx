@@ -47,7 +47,7 @@ const SearchComponent = () => {
 			? movie.release_date.startsWith(filters.year)
 			: true;
 		const genreMatch = filters.genre
-			? movie.genre_ids.includes(filters.genre)
+			? movie.genre_ids.includes(parseInt(filters.genre))
 			: true;
 		const ratingMatch = filters.rating
 			? movie.vote_average >= filters.rating
@@ -63,8 +63,8 @@ const SearchComponent = () => {
 		indexOfLastMovie
 	);
 
-	const handleMovieClick = (imdbID) => {
-		navigate(`/search-movies/${imdbID}`);
+	const handleMovieClick = (movieID) => {
+		navigate(`/search-movies/${movieID}`);
 	};
 
 	const totalPages = Math.ceil(totalResults / resultsPerPage);
@@ -107,7 +107,6 @@ const SearchComponent = () => {
 					))
 				) : (
 					<div className="text-center">
-						{" "}
 						{hasSearched ? "No movies found." : ""}.
 					</div>
 				)}
