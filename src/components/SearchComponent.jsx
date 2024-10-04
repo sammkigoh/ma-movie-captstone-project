@@ -21,8 +21,14 @@ const SearchComponent = () => {
 			const response = await axios.get(
 				`${
 					import.meta.env.VITE_REACT_APP_API_URL
-				}genre/movie/list?api_key=${
+				}search/movie?api_key=${
 					import.meta.env.VITE_REACT_APP_API_KEY
+				}&query=${encodeURIComponent(
+					searchTerm
+				)}&page=${currentPage}&primary_release_year=${
+					filters.year
+				}&with_genres=${filters.genre}&vote_average.gte=${
+					filters.rating
 				}`
 			);
 			setMovies(response.data.results || []);
