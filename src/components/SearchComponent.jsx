@@ -14,7 +14,8 @@ const SearchComponent = () => {
 	const resultsPerPage = 4;
 	const navigate = useNavigate();
 
-	const handleSearch = async () => {
+	const handleSearch = async (e) => {
+		if (e) e.preventDefault();
 		setHasSearched(true); //want to ensure the pagination and the buttons only appear when the search or filter has been initiated
 		try {
 			const response = await axios.get(
