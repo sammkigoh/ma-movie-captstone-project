@@ -5,7 +5,7 @@ import slider from "react-slick/lib/slider";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Navbar from "./components/Navbar";
-import MainBanner from "./components/mainbanner";
+import MainBanner from "./components/MainBanner";
 import SearchComponent from "./components/SearchComponent";
 import FeaturedSection from "./components/FeaturedSection";
 import MovieDetails from "./components/MovieDetails";
