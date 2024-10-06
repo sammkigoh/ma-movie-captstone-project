@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Favorites = () => {
-	const { favorites, removeFavorites } = useContext(FavoritesContext);
+	const { favorites, removeFavorite } = useContext(FavoritesContext);
 	const navigate = useNavigate();
 	const [favoriteMovies, setFavoriteMovies] = useState([]);
 
@@ -30,7 +30,7 @@ const Favorites = () => {
 	}, [favorites]);
 
 	const handleRemoveFavorite = (id) => {
-		removeFavorites(id);
+		removeFavorite(id);
 	};
 
 	const handleMovieClick = (id) => {
@@ -50,7 +50,9 @@ const Favorites = () => {
 							className="bg-transparent rounded-lg flex flex-col"
 						>
 							<img
-								src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+								src={`https://image.tmdb.org/t/p/w500${
+									movie.poster_path || "placeholder.jpg"
+								}`}
 								alt={movie.title}
 								className="w-full h-90 rounded-t-lg object-cover"
 								onClick={() => handleMovieClick(movie.id)}
