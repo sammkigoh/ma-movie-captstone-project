@@ -3,11 +3,9 @@ import axios from "axios";
 
 const FilterComponent = ({ onFilterChange }) => {
 	const [filters, setFilters] = useState({
-		year: "",
 		genre: "",
 		rating: "",
 	});
-	const [years, setYears] = useState([]);
 	const [genres, setGenres] = useState([]);
 
 	useEffect(() => {
@@ -25,13 +23,6 @@ const FilterComponent = ({ onFilterChange }) => {
 				console.error("Error fetching genres:", error);
 			}
 		};
-		//allowing users to select instead of typing the year
-		const currentYear = new Date().getFullYear();
-		const yearsArray = Array.from(
-			{ length: 50 },
-			(_, i) => currentYear - i
-		);
-		setYears(yearsArray);
 
 		fetchGenres();
 	}, []);
@@ -42,16 +33,12 @@ const FilterComponent = ({ onFilterChange }) => {
 	};
 
 	return (
-		<div className="flex justify-center space-x-4">
-			<select name="year" onChange={handleChange}>
-				<option value="">Year</option>
-				{years.map((year) => (
-					<option key={year} value={year}>
-						{year}
-					</option>
-				))}
-			</select>
-			<select name="genre" onChange={handleChange}>
+		<div className="flex justify-center mt-4 space-x-4">
+			<select
+				name="genre"
+				className="select select-bordered w-full max-w-xs"
+				onChange={handleChange}
+			>
 				<option value="">Genre</option>
 				{genres.map((genre) => (
 					<option key={genre.id} value={genre.id}>
@@ -59,14 +46,6 @@ const FilterComponent = ({ onFilterChange }) => {
 					</option>
 				))}
 			</select>
-			<input
-				type="text"
-				name="rating"
-				placeholder="rating"
-				value={filters.rating}
-				onChange={handleChange}
-				className="-2 border rounded"
-			/>
 		</div>
 	);
 };

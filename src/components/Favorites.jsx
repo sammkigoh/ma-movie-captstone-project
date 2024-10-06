@@ -68,7 +68,7 @@ const Favorites = () => {
 					))}
 				</div>
 			) : (
-				<div className="text-gray-800 text-center">
+				<div className="text-white text-center">
 					No favorite movies found.
 				</div>
 			)}

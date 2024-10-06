@@ -65,45 +65,49 @@ const MovieDetails = () => {
 
 	return (
 		<div className="p-4">
-			<button onClick={handleBack} className="text-gray-700">
-				&lt; Back
+			<button
+				onClick={handleBack}
+				className="text-white font-bold bg-transparent"
+			>
+				{"< "}
 			</button>
-			<h1 className="text-2xl font-bold mt-2">{movie.Title}</h1>
-			<button onClick={handleFavorite} className={`text-red-500`}>
-				<FaHeart />
-			</button>
-			{feedbackMessage && (
-				<p className="text-green-500">{feedbackMessage}</p>
-			)}
+			<h1 className="text-2xl text-white font-bold mt-4">
+				{movie.Title}
+			</h1>
+			<div className="flex justify-center mt-6">
+				<button
+					onClick={handleFavorite}
+					className={`text-red-500 flex items-center badge badge-success font-bold p-4 space-s-9`}
+				>
+					<FaHeart />
+				</button>
+				{feedbackMessage && (
+					<p className="text-green-500">{feedbackMessage}</p>
+				)}
+			</div>
 			<img
 				src={movie.Poster}
 				alt={movie.Title}
-				className="mt-4 w-full rounded-lg"
+				className="mx-auto bg-transparent mt-4 max-w-lg h-auto w-full rounded-lg"
 			/>
 			<div className="flex justify-center space-x-4 mt-10">
-				<span className="bg-red-600 font-bold rounded-full px-4 py-2">
+				<span className="badge badge-error font-bold p-4">
 					{movie.Year}
 				</span>
-				<span className="bg-lime-600 font-bold rounded-full px-4 py-2">
+				<span className="badge badge-success font-bold p-4">
 					{movie.Genre}
 				</span>
-				<span className="bg-fuchsia-600 font-bold rounded-full px-4 py-2">
+				<span className="badge badge-info font-bold p-4">
 					{movie.Rating}
 				</span>
 			</div>
 			<h3 className="mt-4 font-bold">Cast:</h3>
 			<p>{movie.Cast}</p>
 			<h3 className="mt-4 font-bold">Plot:</h3>
-			<p className="border rounded-lg p-4">{movie.Plot}</p>
+			<p className="mx-auto mt-4 max-w-lg h-auto border rounded-lg p-4">
+				{movie.Plot}
+			</p>
 			<h3 className="mt-4 font-bold pt-4 pb-4">Trailer:</h3>
-			{/* <a
-				href={movie.Trailer}
-				target="_blank"
-				rel="noopener noreferrer"
-				className="text-blue-500"
-			>
-				Watch Trailer
-			</a> */}
 			<div className="aspect-video">
 				<iframe
 					src={movie.Trailer}

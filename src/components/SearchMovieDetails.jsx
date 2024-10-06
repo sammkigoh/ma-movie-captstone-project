@@ -90,31 +90,40 @@ const SearchMovieDetails = () => {
 			>
 				{"< "}
 			</button>
-			<h1 className="text-2xl font-bold mt-2">{movie.Title}</h1>
-			<button onClick={handleFavorite} className="text-red-500">
-				<FaHeart /> {isFavorited ? "Unfavorite" : "Favorite"}
-			</button>
-			{feedbackMessage && (
-				<p className="text-green-500">{feedbackMessage}</p>
-			)}
+			<h1 className="text-2xl text-white font-bold mt-4">
+				{movie.title}
+			</h1>
+			<div className="flex justify-center mt-6">
+				<button
+					onClick={handleFavorite}
+					className="text-red-500 flex items-center badge badge-success font-bold p-4 space-x-9"
+				>
+					<FaHeart /> {isFavorited ? "Unfavorite" : "Favorite"}
+				</button>
+				{feedbackMessage && (
+					<p className="text-green-500">{feedbackMessage}</p>
+				)}
+			</div>
 			<img
 				src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
 				alt={movie.Title}
-				className="mt-4 w-full rounded-lg"
+				className=" mx-auto bg-transparent mt-4 max-w-lg h-auto rounded-lg"
 			/>
 			<div className="flex justify-center space-x-4 mt-10">
-				<span className="bg-red-600 font-bold rounded-full px-4 py-2">
+				<span className="badge badge-error font-bold p-4">
 					{movie.release_date.split("-")[0]}
 				</span>
-				<span className="bg-lime-600 font-bold rounded-full px-4 py-2">
+				<span className="badge badge-success font-bold p-4">
 					{movie.genres.map((genre) => genre.name).join(", ")}
 				</span>
-				<span className="bg-fuchsia-600 font-bold rounded-full px-4 py-2">
+				<span className="badge badge-info font-bold p-4">
 					{movie.vote_average}
 				</span>
 			</div>
 			<h3 className="mt-4 font-bold">Plot:</h3>
-			<p className="border rounded-lg p-4">{movie.overview}</p>
+			<p className="mx-auto mt-4 max-w-lg h-auto border rounded-lg p-4">
+				{movie.overview}
+			</p>
 			{trailerUrl && (
 				<div className="mt-4">
 					<h3 className="font-bold">Trailer:</h3>

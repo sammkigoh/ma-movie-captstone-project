@@ -1,8 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import ActionMoviesSection from "./ActionMoviesSection";
 import DramaMoviesSection from "./DramaMoviesSection";
 import SearchComponent from "./SearchComponent";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import Slider from "react-slick/lib/slider";
 
 const FeaturedSection = () => {
 	const [featuredMovies, setFeaturedMovies] = useState([]);
@@ -39,69 +41,64 @@ const FeaturedSection = () => {
 
 		fetchMovies();
 	}, []);
-	const scrollLeft = () => {
-		if (scrollRef.current) {
-			scrollRef.current.scrollBy({ left: -300, behavior: "smooth" });
-		}
-	};
-	const scrollRight = () => {
-		if (scrollRef.current) {
-			scrollRef.current.scrollBy({ left: 300, behavior: "smooth" });
-		}
+	const settings = {
+		dots: true,
+		infinite: true,
+		speed: 500,
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		responsive: [
+			{
+				breakpoint: 640,
+				settings: {
+					slidesToShow: 2,
+					slidesToScroll: 2,
+				},
+			},
+			{
+				breakpoint: 768,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3,
+				},
+			},
+		],
 	};
 
 	return (
 		<div className="relative py-4">
 			<SearchComponent />
-			<h2 className="text-xl font-bold mb-2">Featured Movies</h2>
-			<div className="flex items-center">
-				<button
-					onClick={scrollLeft}
-					className="p-2 bg-gray-700 text-white rounded-l"
-				>
-					<FaArrowLeft className="h-5 w-5" />
-				</button>
-				<div
-					ref={scrollRef}
-					className="flex space-x-4 overflow-x-auto w-full sm:justify-center"
-					style={{ maxWidth: "100%", overflowY: "hidden" }}
-				>
-					{featuredMovies.length > 0 ? (
-						featuredMovies.map((movie) => (
-							<div
-								key={movie.imdbID}
-								className="w-40 h-100 bg-gray-300 sm:w-52 rounded-lg flex-shrink-0"
-							>
-								<img
-									src={movie.Poster}
-									alt={movie.Title}
-									className="w-full rounded-t-lg object-cover"
-								/>
-								<h3 className="text-center text-sm mt-2">
-									{movie.Title}
-								</h3>
-							</div>
-						))
-					) : (
-						<div className="text-center">
-							No featured movies found.
-						</div>
-					)}
-				</div>
-				<button
-					onClick={scrollRight}
-					className="p-2 bg-gray-700 text-white rounded-r"
-				>
-					{" "}
-					<FaArrowRight className="h-5 w-5" />
-				</button>
-			</div>
+			<h2 className="text-xl font-bold mb-6">Featured Movies</h2>
+			<Slider {...settings}>
+				{featuredMovies.length > 0 ? (
+					featuredMovies.map((movie) => (
+						<Link
+							to={`/movies/${movie.imdbID}`}
+							key={movie.imdbID}
+							className="w-32 h-100 bg-transparent sm:w-40 md:48 lg: w-52 rounded-lg flex-shrink-0 transition-transform transform hover:scale-105"
+						>
+							<img
+								src={movie.Poster}
+								alt={movie.Title}
+								className="w-full rounded-t-lg object-cover"
+							/>
+							<h3 className="text-center text-white text-sm mt-2">
+								{movie.Title}
+							</h3>
+						</Link>
+					))
+				) : (
+					<div className="text-center text-white">
+						No featured movies found.
+					</div>
+				)}
+			</Slider>
 
 			{/* {Action Movies} */}
 			<ActionMoviesSection actionMovies={actionMovies} />
 
 			{/* {drama movies} */}
-			<DramaMoviesSection dramaMovies={dramaMovies} />
+			<DramaMoviesSection className dramaMovies={dramaMovies} />
 		</div>
 	);
 };
