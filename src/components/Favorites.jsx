@@ -10,23 +10,24 @@ const Favorites = () => {
 
 	useEffect(() => {
 		const fetchFavoriteMovies = async () => {
-			try {
-				const movieRequests = favorites.map((favorite) =>
-					axios.get(
-						`${import.meta.env.VITE_REACT_APP_API_URL}movie/${
-							favorite.id
-						}?api_key=${import.meta.env.VITE_REACT_APP_API_KEY}`
-					)
-				);
-				const responses = await Promise.all(movieRequests);
-				setFavoriteMovies(responses.map((res) => res.data));
-			} catch (error) {
-				console.error("Error fetching favorite movies:", error);
+			if (favorites.length > 0) {
+				try {
+					console.log(favorites); //to debugg
+					const movieRequests = favorites.map((favorite) =>
+						axios.get(
+							`${import.meta.env.VITE_REACT_APP_API_URL}movie/${
+								favorite.id
+							}?api_key=${import.meta.env.VITE_REACT_APP_API_KEY}`
+						)
+					);
+					const responses = await Promise.all(movieRequests);
+					setFavoriteMovies(responses.map((res) => res.data));
+				} catch (error) {
+					console.error("Error fetching favorite movies:", error);
+				}
 			}
 		};
-		if (favorites.length > 0) {
-			fetchFavoriteMovies();
-		}
+		fetchFavoriteMovies();
 	}, [favorites]);
 
 	const handleRemoveFavorite = (id) => {
@@ -51,7 +52,8 @@ const Favorites = () => {
 						>
 							<img
 								src={`https://image.tmdb.org/t/p/w500${
-									movie.poster_path || "placeholder.jpg"
+									movie.poster_path ||
+									"https://placehold.co/600x400/png"
 								}`}
 								alt={movie.title}
 								className="w-full h-90 rounded-t-lg object-cover"
