@@ -3,7 +3,7 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 
 const About = () => {
 	return (
-		<div className="flex flex-col md:flex-row p-4 text-white">
+		<div className="flex flex-col md:flex-row p-4 text-current">
 			<div className="flex-1 flex justify-center items-center mb-4 md:mb-0">
 				<img
 					src="https://res.cloudinary.com/dsbgi2jbh/image/upload/v1727975215/samm_lge0qk.png"
@@ -12,7 +12,7 @@ const About = () => {
 				/>
 			</div>
 
-			<div className="flex-1 ml-0 md:ml-4">
+			<div className="flex-1 text-current ml-0 md:ml-4">
 				<h1 className="text-2xl text-current font-bold mb-2">Hello</h1>
 				<p className="mb-4 text-current">
 					I'm Samuel, a passionate front-end engineer and product
@@ -37,7 +37,7 @@ const About = () => {
 					href="https://www.linkedin.com/in/samuel-kigo-kihara"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="text-blue-500 hover:text-blue-700"
+					className="text-current hover:text-blue-700"
 				>
 					{" "}
 					<FaLinkedinIn size={24} />{" "}
@@ -46,7 +46,7 @@ const About = () => {
 					href="https://github.com/sammkigoh"
 					target="_blank"
 					rel="noopener noreferrer"
-					className="text-blue-500 hover:text-blue-700"
+					className="text-current hover:text-blue-700"
 				>
 					{" "}
 					<FaGithub size={24} />
