@@ -4,48 +4,49 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Favorites = () => {
-	const { favorites, removeFavorite } = useContext(FavoritesContext);
+	const { favorites, removeFavorite, fetchMovieById } =
+		useContext(FavoritesContext);
 	const navigate = useNavigate();
-	const [favoriteMovies, setFavoriteMovies] = useState([]);
-
-	useEffect(() => {
-		const fetchFavoriteMovies = async () => {
-			if (favorites.length > 0) {
-				try {
-					console.log(favorites); //to debugg
-					const movieRequests = favorites.map((favorite) =>
-						axios.get(
-							`${import.meta.env.VITE_REACT_APP_API_URL}movie/${
-								favorite.id
-							}?api_key=${import.meta.env.VITE_REACT_APP_API_KEY}`
-						)
-					);
-					const responses = await Promise.all(movieRequests);
-					setFavoriteMovies(responses.map((res) => res.data));
-				} catch (error) {
-					console.error("Error fetching favorite movies:", error);
-				}
-			}
-		};
-		fetchFavoriteMovies();
-	}, [favorites]);
 
 	const handleRemoveFavorite = (id) => {
 		removeFavorite(id);
 	};
 
-	const handleMovieClick = (id) => {
-		navigate(`/movies/${id}`);
+	const handleMovieClick = async (imdbId) => {
+		console.log("fetching movie with iMdb ID:", imdbId);
+		try {
+			const response = await axios.get(
+				`https://api.themoviedb.org/3/find/${imdbId}?external_source=imdb_id`,
+				{
+					headers: {
+						accept: "application/json",
+						Authorization: `Bearer ${
+							import.meta.env.VITE_TMDB_READ_ACCESS_TOKEN
+						}`,
+					},
+				}
+			);
+
+			if (response.data.movie_results.length > 0) {
+				const movie = response.data.movie_results[0];
+				navigate(`/search-movies/${movie.id}`);
+			} else {
+				console.error("Movie not found");
+			}
+		} catch (error) {
+			console.error("Error fetching movie by ID:", error);
+		}
 	};
 
+	console.log("logging favorites", favorites);
 	return (
 		<div className="p-4 text-white">
 			<h1 className="text-2xl text-white font-bold mb-4">
 				My Favorite Movies
 			</h1>
-			{favorites.length > 0 ? (
+			{favorites ? (
 				<div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-					{favoriteMovies.map((movie) => (
+					{favorites.map((movie) => (
 						<div
 							key={movie.id}
 							className="bg-transparent rounded-lg flex flex-col"
@@ -57,7 +58,7 @@ const Favorites = () => {
 								}`}
 								alt={movie.title}
 								className="w-full h-90 rounded-t-lg object-cover"
-								onClick={() => handleMovieClick(movie.id)}
+								onClick={() => handleMovieClick(movie.imdb_id)}
 							/>
 							<h3 className="text-center text-sm mt-2 truncate">
 								{movie.title}

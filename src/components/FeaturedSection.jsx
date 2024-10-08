@@ -82,13 +82,13 @@ const FeaturedSection = () => {
 								alt={movie.Title}
 								className="w-full rounded-t-lg object-cover"
 							/>
-							<h3 className="text-center text-white text-sm mt-2">
+							<h3 className="text-center font-bold text-current text-sm mt-2">
 								{movie.Title}
 							</h3>
 						</Link>
 					))
 				) : (
-					<div className="text-center text-white">
+					<div className="text-center font-bold text-current">
 						No featured movies found.
 					</div>
 				)}

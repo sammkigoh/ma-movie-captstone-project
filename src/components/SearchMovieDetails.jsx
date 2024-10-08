@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { FavoritesContext } from "../contexts/FavoritesContext";
 import { FaHeart } from "react-icons/fa";
 import axios from "axios";
 
 const SearchMovieDetails = () => {
+	const { addFavorite } = useContext(FavoritesContext);
 	const { id } = useParams();
 	const navigate = useNavigate();
 	const [movie, setMovie] = useState(null);
@@ -48,12 +50,13 @@ const SearchMovieDetails = () => {
 		navigate(-1);
 	};
 	const handleFavorite = () => {
+		addFavorite(movie);
 		const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 		if (!isFavorited) {
-			favorites.push(movie);
-			localStorage.setItem("favorites", JSON.stringify(favorites));
-			setIsFavorited(true);
-			setFeedbackMessage("Added to favorites");
+			// favorites.push(movie);
+			// localStorage.setItem("favorites", JSON.stringify(favorites));
+			// setIsFavorited(true);
+			// setFeedbackMessage("Added to favorites");
 		} else {
 			const updatedFavorites = favorites.filter(
 				(favorite) => favorite.imdbID !== movie.imdbID
@@ -90,7 +93,7 @@ const SearchMovieDetails = () => {
 			>
 				{"< "}
 			</button>
-			<h1 className="text-2xl text-white font-bold mt-4">
+			<h1 className="text-2xl text-white font-bold mt-4 break-words">
 				{movie.title}
 			</h1>
 			<div className="flex justify-center mt-6">
@@ -106,14 +109,14 @@ const SearchMovieDetails = () => {
 			</div>
 			<img
 				src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-				alt={movie.Title}
+				alt={movie.title}
 				className=" mx-auto bg-transparent mt-4 max-w-lg h-auto rounded-lg"
 			/>
 			<div className="flex justify-center space-x-4 mt-10">
-				<span className="badge badge-error font-bold p-4">
+				<span className="badge badge-error font-bold m-3 p-4">
 					{movie.release_date.split("-")[0]}
 				</span>
-				<span className="badge badge-success font-bold p-4">
+				<span className="badge badge-success font-bold m-3 p-4">
 					{movie.genres.map((genre) => genre.name).join(", ")}
 				</span>
 				<span className="badge badge-info font-bold p-4">

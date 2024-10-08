@@ -11,14 +11,14 @@ const ActionMoviesSection = ({ actionMovies }) => {
 						<Link to={`/movies/${movie.imdbID}`} key={movie.imdbID}>
 							<div
 								key={movie.imdbID}
-								className=" bg-transparent text-white font-bold rounded-lg flex flex-col"
+								className=" bg-transparent text-current font-bold rounded-lg flex flex-col"
 							>
 								<img
 									src={movie.Poster}
 									alt={movie.Title}
 									className="w-full h-90 rounded-t-lg object-cover"
 								/>
-								<h3 className="text-center text-sm mt-2 truncate">
+								<h3 className="text-center text-sm mt-2 w-full px-1 break-words">
 									{movie.Title}
 								</h3>
 							</div>

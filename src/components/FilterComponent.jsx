@@ -33,10 +33,10 @@ const FilterComponent = ({ onFilterChange }) => {
 	};
 
 	return (
-		<div className="flex justify-center mt-4 space-x-4">
+		<div className="flex justify-center mt-4 space-x-4 text-current">
 			<select
 				name="genre"
-				className="select select-bordered w-full max-w-xs"
+				className="select select-bordered text-current w-full max-w-xs"
 				onChange={handleChange}
 			>
 				<option value="">Genre</option>

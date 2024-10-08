@@ -3,16 +3,18 @@ import React, { createContext, useEffect, useState } from "react";
 export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-	const [isDarkMode, setIsDarkMode] = useState(false);
+	const [isDarkMode, setIsDarkMode] = useState(() => {
+		const darkModePreference = localStorage.getItem("darkMode");
+		return darkModePreference === "true";
+	});
 
 	useEffect(() => {
-		const darkModePreference = localStorage.getItem("darkMode") === "true";
-		setIsDarkMode(darkModePreference);
 		document.documentElement.setAttribute(
 			"data-theme",
-			darkModePreference ? "dark" : "light"
+			isDarkMode ? "dark" : "light"
 		);
-	}, []);
+		localStorage.setItem("darkMode", isDarkMode);
+	}, [isDarkMode]);
 
 	const toggleTheme = () => {
 		setIsDarkMode((prev) => {

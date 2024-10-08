@@ -6,6 +6,10 @@
 	line-height: 1.5;
 	font-weight: 400;
 
+	--bg-color: #242424;
+	--text-color: rgba(255, 255, 255, 0.87);
+	--link-color: #646cff;
+
 	color-scheme: light dark;
 	color: rgba(255, 255, 255, 0.87);
 	background-color: #242424;
@@ -31,12 +35,38 @@ body {
 	place-items: center;
 	min-width: 320px;
 	min-height: 100vh;
+	transition: background-color 0.3s ease, color 0.3s ease;
 }
 body.dark {
+	--bg-color: #121212;
+	--text-color: #ffffff;
+}
+body.light {
+	--bg-color: #ffffff;
+	--text-color: #121212;
+}
+[data-theme="light"] {
+	background-color: white;
+	color: black;
+}
+[data-theme="dark"] .navbar {
 	background-color: #121212;
-	color: #ffffff;
+	color: white;
+}
+.navbar {
+	background-color: transparent;
+	color: #121212;
+}
+.card {
+	background-color: rgba(255, 255, 255, 0.8);
+	color: #121212;
+	transition: background-color 0.3s, color 0.3s;
 }
 
+[data-theme="dark"] .card {
+	background-color: rgba(255, 255, 255, 0.1);
+	color: white;
+}
 h1 {
 	font-size: 3.2em;
 	line-height: 1.1;

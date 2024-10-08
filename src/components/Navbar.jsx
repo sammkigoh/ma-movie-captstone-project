@@ -61,13 +61,13 @@ const Navbar = () => {
 
 			{/* Menu on desktops */}
 			<div className="hidden md:flex items-center space-x-4">
-				<Link to="/" className="text-white">
+				<Link to="/" className="text-current">
 					Home
 				</Link>
-				<Link to="/favorites" className="text-white">
+				<Link to="/favorites" className="text-current">
 					Favorites
 				</Link>
-				<Link to="/about" className="text-white">
+				<Link to="/about" className="text-current">
 					About
 				</Link>
 				<div className="flex items-center ml-3">
@@ -78,7 +78,7 @@ const Navbar = () => {
 						onChange={toggleTheme}
 					/>
 				</div>
-				<Link to="/search" className="text-white">
+				<Link to="/search" className="text-current">
 					<FaSearch className="h-6 w-6" />
 				</Link>
 			</div>
@@ -89,7 +89,7 @@ const Navbar = () => {
 					menuOpen ? "block" : "hidden"
 				} md:hidden z-50`}
 			>
-				<button className="text-white mb-2" onClick={toggleMenu}>
+				<button className="text-current mb-2" onClick={toggleMenu}>
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						className="h-6 w-6"
@@ -105,13 +105,13 @@ const Navbar = () => {
 						/>
 					</svg>
 				</button>
-				<Link to="/" className="block text-white mb-2">
+				<Link to="/" className="block text-current mb-2">
 					Home
 				</Link>
-				<Link to="/favorites" className="block text-white mb-2">
+				<Link to="/favorites" className="block text-current mb-2">
 					Favorites
 				</Link>
-				<Link to="/about" className="block text-white mb-2">
+				<Link to="/about" className="block text-current mb-2">
 					About Me
 				</Link>
 				<div className="flex items-center mb-2">
@@ -122,7 +122,7 @@ const Navbar = () => {
 						onChange={toggleTheme}
 					/>
 				</div>
-				<Link to="/search" className="block text-white mb-2">
+				<Link to="/search" className="block text-current mb-2">
 					<FaSearch className="h-6 w-6" />
 				</Link>
 			</div>

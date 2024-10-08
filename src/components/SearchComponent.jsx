@@ -81,14 +81,14 @@ const SearchComponent = () => {
 		};
 	}, []);
 	return (
-		<div className="p-6 text-white">
+		<div className="p-6 text-current">
 			<form onSubmit={handleSearch}>
 				<input
 					type="text"
 					placeholder="What movie are you looking for"
 					value={searchTerm}
 					onChange={(e) => setSearchTerm(e.target.value)}
-					className="p-2 w-full border rounded"
+					className="p-2 w-full border rounded text-current bg-transparent"
 				/>
 				<button
 					type="submit"
@@ -119,7 +119,7 @@ const SearchComponent = () => {
 						<button
 							disabled={currentPage === 1}
 							onClick={() => setCurrentPage(currentPage - 1)}
-							className="bg-green-500 text-white rounded-full px-4 py-2"
+							className="bg-green-500 text-white rounded-full px-4 m-6 py-2"
 						>
 							Prev
 						</button>
