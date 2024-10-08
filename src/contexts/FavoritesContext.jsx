@@ -1,23 +1,33 @@
 import axios from "axios";
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 export const FavoritesContext = createContext();
 
 export const FavoritesProvider = ({ children }) => {
 	const [favorites, setFavorites] = useState([]);
 
-	const addFavorite = (movie) => {
-		localStorage.setItem(
-			"favorites",
-			JSON.stringify([...favorites, movie])
-		);
+	useEffect(() => {
 		const storedFavorites = localStorage.getItem("favorites");
-		const data = JSON.parse(storedFavorites);
-		setFavorites(data);
+		if (storedFavorites) {
+			setFavorites(JSON.parse(storedFavorites));
+		}
+	}, []);
+
+	const addFavorite = (movie) => {
+		const newFavorites = [...favorites, movie];
+		localStorage.setItem("favorites", JSON.stringify(newFavorites));
+		setFavorites(newFavorites);
 	};
+	// const storedFavorites = localStorage.getItem("favorites");
+	// const data = JSON.parse(storedFavorites);
+	// setFavorites(data);
 
 	const removeFavorite = (id) => {
-		setFavorites((prev) => prev.filter((movie) => movie.id !== id));
+		const updatedFavorites = favorites.filter((movie) => movie.id !== id);
+		localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+		setFavorites(updatedFavorites);
+
+		// setFavorites((prev) => prev.filter((movie) => movie.id !== id));
 	};
 
 	const fetchMovieById = async (imbdId) => {

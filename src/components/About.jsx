@@ -15,16 +15,9 @@ const About = () => {
 			<div className="flex-1 ml-0 md:ml-4">
 				<h1 className="text-2xl font-bold mb-2">Hello</h1>
 				<p className="mb-4">
-					{" "}
 					I'm Samuel, a passionate product designer and front-end
-					developer.
-				</p>
-				This project, Ma-Movie, is dedicated to helping users discover
-				and manage their favorite movies effortlessly.
-				<p>
-					Here, you'll find features that allow you to explore various
-					films, add favorites, and even switch between light and dark
-					themes for a personalized experience!
+					developer. This project, Ma-Movie, is dedicated to helping
+					users discover and manage their favorite movies effortlessly
 				</p>
 			</div>
 

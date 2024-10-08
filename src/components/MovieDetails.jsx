@@ -55,7 +55,7 @@ const MovieDetails = () => {
 	if (!movie) {
 		return (
 			<div className="p-4">
-				<button onClick={handleBack} className="text-gray-700">
+				<button onClick={handleBack} className="text-current">
 					&lt; Back
 				</button>
 				<h1 className="text-2xl font-bold mt-2">Movie Not Found</h1>
@@ -67,11 +67,11 @@ const MovieDetails = () => {
 		<div className="p-4">
 			<button
 				onClick={handleBack}
-				className="text-white font-bold bg-transparent"
+				className="text-current font-bold bg-transparent"
 			>
 				{"< "}
 			</button>
-			<h1 className="text-2xl text-white font-bold mt-4">
+			<h1 className="text-2xl text-current font-bold mt-4">
 				{movie.Title}
 			</h1>
 			<div className="flex justify-center mt-6">
