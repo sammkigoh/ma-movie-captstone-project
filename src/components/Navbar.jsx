@@ -85,7 +85,7 @@ const Navbar = () => {
 
 			{/* The menu on mobile devices */}
 			<div
-				className={`absolute top-16 left-0 w-full bg-current p-4 transition-all duration-300 ease-in-out ${
+				className={`absolute top-16 left-0 w-full bg-gray-500 p-4 transition-all duration-300 ease-in-out ${
 					menuOpen ? "block" : "hidden"
 				} md:hidden z-50`}
 			>
