@@ -13,8 +13,8 @@ const About = () => {
 			</div>
 
 			<div className="flex-1 ml-0 md:ml-4">
-				<h1 className="text-2xl font-bold mb-2">Hello</h1>
-				<p className="mb-4">
+				<h1 className="text-2xl text-current font-bold mb-2">Hello</h1>
+				<p className="mb-4 text-current">
 					I'm Samuel, a passionate front-end engineer and product
 					designer based in Nairobi, Kenya. With a solid foundation in
 					hospitality management and over eight years of experience in
