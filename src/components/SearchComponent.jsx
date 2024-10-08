@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import SearchMovieCard from "./SearchMovieCard";
 import FilterComponent from "./FilterComponent";
 
 const SearchComponent = () => {
+	const navigate = useNavigate();
+	const location = useLocation();
 	const [searchTerm, setSearchTerm] = useState("");
 	const [movies, setMovies] = useState([]);
 	const [filters, setFilters] = useState({ year: "", genre: "", rating: "" });
@@ -12,11 +14,18 @@ const SearchComponent = () => {
 	const [totalResults, setTotalResults] = useState(0);
 	const [hasSearched, setHasSearched] = useState(false);
 	const resultsPerPage = 4;
-	const navigate = useNavigate();
+
+	useEffect(() => {
+		if (location.state && location.state.movies) {
+			setMovies(location.state.movies);
+			setSearchTerm(location.state.searchTerm);
+			setHasSearched(true);
+		}
+	}, [location.state]);
 
 	const handleSearch = async (e) => {
 		if (e) e.preventDefault();
-		setHasSearched(true); //want to ensure the pagination and the buttons only appear when the search or filter has been initiated
+		setHasSearched(true); //want to ensure the pagination and the buttons only appear when the search or filter has been initiated. in a future updated, I will work on inlcuded more filterning option after I have figured the API
 		try {
 			const response = await axios.get(
 				`${
@@ -34,6 +43,10 @@ const SearchComponent = () => {
 			setMovies(response.data.results || []);
 			setTotalResults(response.data.total_results);
 			setCurrentPage(1);
+
+			navigate("/search", {
+				state: { movies: response.data.results, searchTerm },
+			});
 		} catch (error) {
 			console.error("Error fetching movie data:", error);
 		}
