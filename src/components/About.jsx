@@ -15,9 +15,20 @@ const About = () => {
 			<div className="flex-1 ml-0 md:ml-4">
 				<h1 className="text-2xl font-bold mb-2">Hello</h1>
 				<p className="mb-4">
-					I'm Samuel, a passionate product designer and front-end
-					developer. This project, Ma-Movie, is dedicated to helping
-					users discover and manage their favorite movies effortlessly
+					I'm Samuel, a passionate front-end engineer and product
+					designer based in Nairobi, Kenya. With a solid foundation in
+					hospitality management and over eight years of experience in
+					digital marketing, I've transitioned into product design,
+					focusing on creating user-centered experiences that resonate
+					with African audiences. I believe technology should enhance
+					everyday life, and I strive to design products that are both
+					functional and delightful. Currently, I'm honing my skills
+					in React and Tailwind CSS while developing a movie search
+					application that showcases my dedication to seamless user
+					experiences. Outside of coding, I enjoy running and organic
+					farming, drawing inspiration from nature to inform my design
+					approach. Join me on this exciting journey as I explore the
+					intersection of technology, culture, and creativity.
 				</p>
 			</div>
 
